@@ -10,7 +10,7 @@ def goog_cloud_vision (event, context):
     image =get_object_body(event['bucket'], event['key'])
     encoded_img = base64.b64encode(image).decode('utf-8') 
     TxtKey = "OCR-"+event['key']+".txt"
-    api_url = GOOGLE_CLOUD_VISION_API_URL + "AIzaSyAnFQngSxRc3Rrj_LlHG4eCI2D58EEdhM8"
+    api_url = GOOGLE_CLOUD_VISION_API_URL + "API_KEY"
     req_body = json.dumps({
         'requests': [{
             'image': {
